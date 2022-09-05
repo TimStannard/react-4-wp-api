@@ -11,10 +11,8 @@ const MobileMenu = () => {
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/news">News</Link>
+                    <Link to="/dinosaurs">Dinosaurs</Link>
                 </li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
             </ul>
         </>
     )

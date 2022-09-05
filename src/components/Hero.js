@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 const Hero = () => {
     return (
         <div id="hero">
-            <h1 className="site-heading">Pixabay API</h1>
-            <p>Using React and Axios</p>
+            <h1 className="site-heading">Wordpress API</h1>
+            <p>Using React, Custom WP Theme</p>
         </div>
     )
 }

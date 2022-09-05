@@ -8,25 +8,22 @@ import Hero from './Hero'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import pages
 import Home from "../pages/Home"
-import News from "../pages/News"
-import About from "../pages/About"
+import Dinosaurs from "../pages/Dinosaurs"
 
-class App extends Component {
+const App = () => {
   // render() controls the contents of the container node you pass in. 
-  render() {
-    return (
-      <BrowserRouter>
-        <Navbar />
-        <Hero />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/news' element={<News />} />
-          <Route path='/about' element={<About />} />
-        </Routes>
-      </BrowserRouter>
-    )
-  }
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <Hero />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/dinosaurs' element={<Dinosaurs />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
+
 
 export default App
 

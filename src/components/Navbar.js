@@ -19,7 +19,7 @@ const Navbar = () => {
             <div id='topnav'>
 
                 <div id='logo'>
-                    <Link to="/">LOGO</Link>
+                    <Link to="/">Wordpress</Link>
                 </div>
 
 
@@ -29,10 +29,8 @@ const Navbar = () => {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/news">News</Link>
+                        <Link to="/dinosaurs">Dinosaurs</Link>
                     </li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
                 </ul>
 
                 {/* Hamburger icon, only shows up on small screens. */}

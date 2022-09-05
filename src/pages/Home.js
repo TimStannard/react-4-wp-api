@@ -6,8 +6,6 @@ const Home = () => {
     return (
         <div id="home-container">
             <div className="section">
-                <ImageGallery type="sea" />
-                <ImageGallery type="shells" />
                 <ImageGallery type="mountain" />
             </div>
         </div>
@@ -15,6 +13,3 @@ const Home = () => {
 }
 
 export default Home
-
-// Note: other components we can use
-

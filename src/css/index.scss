@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,500;1,800&display=swap');
+
+$lightblue: #8797e5;
+$darkblue: rgb(46, 53, 81);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0px;
+    font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    color: $darkblue;
+    margin-bottom: 20px;
+    font-weight: 100;
+    color: $darkblue;
+    margin-bottom: 20px;
+    font-weight: 100;
+    border-bottom: 1px solid $darkblue;
+}
+
+#results,
+.results {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr;
+    margin-bottom: 20px;
+}
+
+.section {
+    padding: 0 30px;
+}
+
+#hero {
+    padding: 30px 50px 40px 50px;
+    background-color: $lightblue;
+    color: $darkblue;
+    margin-bottom: 30px;
+
+    p {
+        font-size: 26px;
+    }
+}
+
+// images
+
+.photo-container {
+    position: relative;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    margin: 0;
+    padding: 9px;
+    color: white;
+    text-shadow: 0 0 2px $darkblue;
+    font-weight: 200;
+    font-size: 12px;
+}
+
+/* nav */
+
+#topnav {
+    background: $darkblue;
+    display: flex;
+    padding: 20px;
+}
+
+#topnav #logo {
+    width: 25%;
+    color: $lightblue;
+    font-weight: 600;
+    font-size: 28px;
+    margin-right: 30px;
+    text-align: left;
+}
+
+#menu {
+    width: 75%;
+    padding-right: 30px;
+}
+
+#topnav {
+    text-align: right;
+}
+
+#topnav a {
+    color: $lightblue;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+#button-container {
+    width: 50%;
+}
+
+/* buttons */
+
+button {
+    background: none;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#hamburger-icon {
+    color: $lightblue;
+    font-size: 33px;
+    position: relative;
+    top: 2px;
+}
+
+#mobile-menu {
+    width: 100%;
+    height: 100%;
+    background-color: $lightblue;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-top: 25%;
+
+    a {
+        color: $darkblue;
+        text-decoration: none;
+        font-size: 30px;
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: 700;
+    }
+}
+
+
+#close-nav-menu {
+    z-index: 2;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    font-size: 53px;
+    color: $darkblue;
+}
+
+#menu {
+    display: none;
+}
+
+#menu-container {
+    width: 100%;
+}
+
+#topnav a:hover {
+    color: $lightblue;
+}
+
+/* Media queries */
+@media screen and (min-width: 680px) {
+    .results {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .show-mobile-menu-button {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+        width: 75%;
+    }
+
+    #menu li {
+        display: inline-block;
+    }
+
+    #menu-container {
+        display: none;
+    }
+}
