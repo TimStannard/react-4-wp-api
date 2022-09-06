@@ -1,5 +1,4 @@
 import React, { Component, useState } from 'react'
-import { List } from 'react-bootstrap-icons';
 // router
 import { Link } from "react-router-dom";
 

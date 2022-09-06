@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-// generic image component
-import ImageGallery from '../components/ImageGallery'
 
 const Home = () => {
     return (
         <div id="home-container">
             <div className="section">
-                <ImageGallery type="mountain" />
+                <h2>Welcome to Dinosaur Central</h2>
             </div>
         </div>
     )
