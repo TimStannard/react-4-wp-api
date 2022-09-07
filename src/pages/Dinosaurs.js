@@ -1,17 +1,18 @@
 import { useAxios } from "use-axios-client";
 import React from 'react'
 import { Link } from "react-router-dom";
+const baseUrl = process.env.REACT_APP_WP_API_BASEURL;
 
 // ------------This function:------------
 // - gets images from api
 // - renders images based on the API data
 
 
-const GetDinosaurs = () => {
+const AllDinosaurs = () => {
     // console.log(props);
 
     // declare endpoint
-    const endpoint = `http://localhost/wordpress/wp-json/wp/v2/dinosaurs?_embed`
+    const endpoint = `${baseUrl}/dinosaurs?_embed`
 
     const { data, error, loading } = useAxios({
         url: endpoint
@@ -22,13 +23,13 @@ const GetDinosaurs = () => {
     if (!data) return "No data...";
     if (data.length === 0) return "No results found!";
     if (error) return "Error!";
-    console.log(data)
+    // console.log(data)
 
     // ----This function shows the cats on the screen------
     const renderedDinos = data.map((dino, index) => {
         return (
             <Link className="dinosaurs-link" to={`/dinosaur/${dino.id}`} key={index}>
-                <div className="dino-container">
+                <div className="dino-container item-container">
                     <img src={dino._embedded['wp:featuredmedia']['0'].source_url} alt={dino.title.rendered} />
                     <h4 className="name">{dino.title.rendered}</h4>
                     {/* <div dangerouslySetInnerHTML={{ __html: dino.content.rendered }} />  */}
@@ -50,10 +51,10 @@ const GetDinosaurs = () => {
 
 const Dinosaurs = () => {
     return (
-        <div id="dinosaurs-page">
+        <div id="dinosaurs-page" className="page-container">
             <h2>Dinosaurs</h2>
-            <div id="dinosaurs-grid">
-                <GetDinosaurs />
+            <div id="dinosaurs-grid" className="grid-container">
+                <AllDinosaurs />
             </div>
         </div>
     )

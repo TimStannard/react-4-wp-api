@@ -1,6 +1,7 @@
 import { useAxios } from "use-axios-client";
 import React from 'react'
 import { Link, useParams } from "react-router-dom";
+const baseUrl = process.env.REACT_APP_WP_API_BASEURL;
 
 // ------------This function:------------
 // - gets images from api
@@ -12,7 +13,7 @@ const GetDino = () => {
     // console.log(params);
 
     // declare endpoint
-    const endpoint = `http://localhost/wordpress/wp-json/wp/v2/dinosaurs/${params.id}?_embed`
+    const endpoint = `${baseUrl}/dinosaurs/${params.id}?_embed`
 
     const { data, error, loading } = useAxios({
         url: endpoint
@@ -38,7 +39,7 @@ const GetDino = () => {
 
 const SingleDinosaur = () => {
     return (
-        <div id="dinosaur-item-page">
+        <div id="dinosaur-item-page" className="page-container">
             <GetDino />
         </div>
     )

@@ -9,6 +9,11 @@ $light-border: 10px;
     padding: 0;
 }
 
+// ultilities
+.mb-2 {
+    margin-bottom: 20px;
+}
+
 body {
     margin: 0;
     padding: 0px;
@@ -25,8 +30,7 @@ h2 {
     font-weight: 100;
     color: $darkblue;
     margin-bottom: 20px;
-    font-weight: 100;
-    border-bottom: 1px solid $darkblue;
+    font-weight: 800;
 }
 
 #results,
@@ -45,10 +49,19 @@ h2 {
     padding: 30px 50px 40px 50px;
     background-color: $lightblue;
     color: $darkblue;
-    margin-bottom: 30px;
 
     p {
         font-size: 26px;
+    }
+}
+
+#footer {
+    padding: 120px;
+    background-color: $darkblue;
+    color: $lightblue;
+
+    p {
+        font-size: 18px;
     }
 }
 
@@ -62,22 +75,6 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-#dinosaurs-page {
-    padding: 30px;
-}
-
-.name {
-    // position: absolute;
-    // bottom: 0px;
-    // left: 0px;
-    // margin: 0;
-    // padding: 9px;
-    // color: white;
-    // text-shadow: 0 0 2px $darkblue;
-    // font-weight: 200;
-    // font-size: 12px;
 }
 
 /* nav */
@@ -194,13 +191,28 @@ button:hover {
 }
 
 .dinosaurs-link:hover {
-    background-color: $darkblue;
+    img {
+        opacity: 0.7;
+    }
+}
 
+.page-container {
+    padding: 60px;
+}
+
+.item-container {
     h4 {
-        color: white;
+        color: $darkblue;
+        margin: 10px 0;
     }
 
+    img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
 }
+
 
 /* Media queries */
 @media screen and (min-width: 680px) {
@@ -226,28 +238,10 @@ button:hover {
     }
 
     // dino page
-    #dinosaurs-grid {
+    .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-    }
-
-    .dino-container {
-        h4 {
-            color: $darkblue;
-            margin: 10px 0;
-            padding: 0 10px;
-        }
-
-        img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-    }
-
-    #dinosaur-item-page {
-        padding: 0px 20px;
     }
 
     .single-dino-container {

@@ -12,6 +12,9 @@ const MobileMenu = () => {
                 <li>
                     <Link to="/dinosaurs">Dinosaurs</Link>
                 </li>
+                <li>
+                    <Link to="/news">News</Link>
+                </li>
             </ul>
         </>
     )
