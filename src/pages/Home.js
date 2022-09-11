@@ -3,10 +3,11 @@ import heroImage from '../assets/hero.jpeg';
 
 const Home = () => {
     return (
+        // <div id="home-container" className="page-container" style={{ backgroundImage: `url(${heroImage})` }}>
         <div id="home-container" className="page-container">
             <div className="section">
                 <h2>Welcome to Dinosaur Central!</h2>
-                <img src={heroImage} alt="dinosaurs painting" />
+                <img id="dino-image" src={heroImage} alt="dinosaurs painting" />
             </div>
         </div>
     )

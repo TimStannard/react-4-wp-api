@@ -13,6 +13,8 @@ const Navbar = () => {
         // test open only using true
         // openMenu(true);
         openMenu(!menuIsOpen);
+        // toggle no scroll on body
+        document.body.classList.toggle('no-scroll');
     };
 
     return (
@@ -33,7 +35,13 @@ const Navbar = () => {
                         <Link to="/dinosaurs">Dinosaurs</Link>
                     </li>
                     <li>
-                        <Link className="test" to="/news">News</Link>
+                        <Link to="/news">News</Link>
+                    </li>
+                    <li>
+                        <Link to="/artists">Artists</Link>
+                    </li>
+                    <li>
+                        <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
 
@@ -46,7 +54,7 @@ const Navbar = () => {
             </div>
 
             {/* If menuIsOpen, show the mobile menu*/}
-            {menuIsOpen && <MobileMenu />}
+            {menuIsOpen && <MobileMenu closeMethod={toggleMobileMenu} />}
             {/* If menuIsOpen, show the close button */}
             {menuIsOpen &&
                 (

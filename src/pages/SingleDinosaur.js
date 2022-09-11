@@ -24,13 +24,16 @@ const GetDino = () => {
     if (!data) return "No data...";
     if (data.length === 0) return "No results found!";
     if (error) return "Error!";
-    console.log(data)
+    // console.log(data)
 
     // ----This function shows the dino on the screen------
     return (
         <div className="single-dino-container">
             <h2>{data.title.rendered}</h2>
             <img src={data._embedded['wp:featuredmedia']['0'].source_url} alt={data.title.rendered} />
+            <h3>Nickname: {data.acf.nickname}</h3>
+            <h3>Diet: {data.acf.diet}</h3>
+            <br />
             <div id="content" dangerouslySetInnerHTML={{ __html: data.content.rendered }} />
             <Link className="regular-button" to='/dinosaurs'>Go Back</Link>
         </div>

@@ -8,11 +8,11 @@ const baseUrl = process.env.REACT_APP_WP_API_BASEURL;
 // - renders images based on the API data
 
 
-const AllDinosaurs = () => {
+const AllArtists = () => {
     // console.log(props);
 
     // declare endpoint
-    const endpoint = `${baseUrl}/dinosaurs?_embed`
+    const endpoint = `${baseUrl}/artists?_embed`
 
     const { data, error, loading } = useAxios({
         url: endpoint
@@ -26,15 +26,13 @@ const AllDinosaurs = () => {
     // console.log(data)
 
     // ----This function shows the cats on the screen------
-    const renderedDinos = data.map((dino, index) => {
+    const renderedArtists = data.map((artist, index) => {
         return (
-            <div className="dino-container item-container" key={index}>
-                <Link className="dinosaurs-link" to={`/dinosaur/${dino.id}`} >
-                    <img src={dino._embedded['wp:featuredmedia']['0'].source_url} alt={dino.title.rendered} />
-                    <h4 className="name">{dino.title.rendered}</h4>
+            <div className="artist-container item-container" key={index}>
+                <Link className="artists-link" to={`/artist/${artist.id}`} >
+                    <img src={artist._embedded['wp:featuredmedia']['0'].source_url} alt={artist.title.rendered} />
+                    <h4 className="name">{artist.title.rendered}</h4>
                 </Link>
-                <p><b>Nickname: </b>{dino.acf.nickname}</p>
-                {/* <div dangerouslySetInnerHTML={{ __html: dino.content.rendered }} />  */}
             </div>
 
         )
@@ -43,22 +41,22 @@ const AllDinosaurs = () => {
     // we return the rendered cats
     return (
         <>
-            {renderedDinos}
+            {renderedArtists}
         </>
     )
 }
 
 // -----This is our main component we export-----
 
-const Dinosaurs = () => {
+const Artists = () => {
     return (
-        <div id="dinosaurs-page" className="page-container">
-            <h2>Dinosaurs</h2>
-            <div id="dinosaurs-grid" className="grid-container">
-                <AllDinosaurs />
+        <div id="artists-page" className="page-container">
+            <h2>Artists</h2>
+            <div id="artists-grid" className="grid-container">
+                <AllArtists />
             </div>
         </div>
     )
 }
 
-export default Dinosaurs
+export default Artists
