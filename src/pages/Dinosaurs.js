@@ -14,19 +14,19 @@ const AllDinosaurs = () => {
     // declare endpoint
     const endpoint = `${baseUrl}/dinosaurs?_embed`
 
-    const { data, error, loading } = useAxios({
+    const { data: dinosaurs, error, loading } = useAxios({
         url: endpoint
     })
 
     // ----Check if photos have been returned----
     if (loading) return "Loading...";
-    if (!data) return "No data...";
-    if (data.length === 0) return "No results found!";
+    if (!dinosaurs) return "No data...";
+    if (dinosaurs.length === 0) return "No results found!";
     if (error) return "Error!";
     // console.log(data)
 
     // ----This function shows the cats on the screen------
-    const renderedDinos = data.map((dino, index) => {
+    const renderedDinos = dinosaurs.map((dino, index) => {
         return (
             <div className="dino-container item-container" key={index}>
                 <Link className="dinosaurs-link" to={`/dinosaur/${dino.id}`} >

@@ -2,11 +2,15 @@
 
 $lightblue: #8797e5;
 $darkblue: rgb(46, 53, 81);
+$lightyellow: #ffeb3b;
+$darkyellow: #645a00;
 $light-border: 10px;
+$very-light-border: 5px;
 
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Nunito', sans-serif;
 }
 
 // ultilities
@@ -19,11 +23,18 @@ $light-border: 10px;
 body {
     margin: 0;
     padding: 0px;
-    font-family: 'Nunito', sans-serif;
 
     &.no-scroll {
         overflow-y: hidden;
     }
+}
+
+label {
+    display: block;
+}
+
+a {
+    text-decoration: none;
 }
 
 h1 {
@@ -196,7 +207,7 @@ button:hover {
 .regular-button {
     color: white;
     background-color: $darkblue;
-    padding: 4px 7px;
+    padding: 10px 17px;
     display: inline-block;
     border-radius: $light-border;
     text-decoration: none;
@@ -228,14 +239,59 @@ button:hover {
     h4 {
         color: $darkblue;
         margin: 10px 0;
+        font-size: 22px;
     }
 
     img {
         width: 100%;
+        max-width: 500px;
         height: 250px;
         object-fit: cover;
         object-position: top;
     }
+}
+
+.single-artist-container h4 {
+    font-size: 45px;
+}
+
+// taxonomy
+
+.taxonomy-term-pill {
+    background: $lightyellow;
+    color: $darkyellow;
+    margin-right: 5px;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+
+    &:hover {
+        background: $darkyellow;
+        color: $lightyellow;
+        ;
+    }
+}
+
+// form
+input,
+textarea {
+    padding: 5px;
+    border-radius: $very-light-border;
+    border: none;
+    border: 1px solid $darkblue;
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+// bootstrap icons in buttons
+a svg {
+    position: relative;
+    top: 2px;
+}
+
+#artists-grid {
+    margin-bottom: 20px;
 }
 
 

@@ -14,19 +14,19 @@ const AllArtists = () => {
     // declare endpoint
     const endpoint = `${baseUrl}/artists?_embed`
 
-    const { data, error, loading } = useAxios({
+    const { data: artists, error, loading } = useAxios({
         url: endpoint
     })
 
     // ----Check if photos have been returned----
     if (loading) return "Loading...";
-    if (!data) return "No data...";
-    if (data.length === 0) return "No results found!";
+    if (!artists) return "No data...";
+    if (artists.length === 0) return "No results found!";
     if (error) return "Error!";
-    // console.log(data)
+    // console.log(artists)
 
     // ----This function shows the cats on the screen------
-    const renderedArtists = data.map((artist, index) => {
+    const renderedArtists = artists.map((artist, index) => {
         return (
             <div className="artist-container item-container" key={index}>
                 <Link className="artists-link" to={`/artist/${artist.id}`} >
@@ -51,7 +51,7 @@ const AllArtists = () => {
 const Artists = () => {
     return (
         <div id="artists-page" className="page-container">
-            <h2>Artists</h2>
+            <h2>All Artists</h2>
             <div id="artists-grid" className="grid-container">
                 <AllArtists />
             </div>

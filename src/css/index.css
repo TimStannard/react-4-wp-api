@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Nunito", sans-serif;
 }
 
 .mb-2 {
@@ -11,10 +12,17 @@
 body {
   margin: 0;
   padding: 0px;
-  font-family: "Nunito", sans-serif;
 }
 body.no-scroll {
   overflow-y: hidden;
+}
+
+label {
+  display: block;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1 {
@@ -180,7 +188,7 @@ button:hover {
 .regular-button {
   color: white;
   background-color: rgb(46, 53, 81);
-  padding: 4px 7px;
+  padding: 10px 17px;
   display: inline-block;
   border-radius: 10px;
   text-decoration: none;
@@ -205,14 +213,53 @@ button:hover {
 .item-container h4 {
   color: rgb(46, 53, 81);
   margin: 10px 0;
+  font-size: 22px;
 }
 .item-container img {
   width: 100%;
+  max-width: 500px;
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+}
+
+.single-artist-container h4 {
+  font-size: 45px;
+}
+
+.taxonomy-term-pill {
+  background: #ffeb3b;
+  color: #645a00;
+  margin-right: 5px;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+.taxonomy-term-pill:hover {
+  background: #645a00;
+  color: #ffeb3b;
+}
+
+input,
+textarea {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid rgb(46, 53, 81);
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+a svg {
+  position: relative;
+  top: 2px;
+}
+
+#artists-grid {
+  margin-bottom: 20px;
 }
 
 /* Media queries */

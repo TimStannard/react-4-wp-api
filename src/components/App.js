@@ -15,6 +15,7 @@ import News from "../pages/News"
 import NewsItem from "../pages/NewsItem"
 import Artists from "../pages/Artists"
 import ArtistItem from "../pages/ArtistItem"
+import ArtistsViaGenre from "../pages/ArtistsViaGenre"
 import Contact from "../pages/Contact"
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
         <Route path='/news/:id' element={<NewsItem />} />
         <Route path='/artists' element={<Artists />} />
         <Route path='/artist/:id' element={<ArtistItem />} />
+        <Route path='/genre/:id' element={<ArtistsViaGenre />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer />

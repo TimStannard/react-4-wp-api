@@ -20,22 +20,22 @@ const RenderedNewsPost = () => {
     // declare endpoint
     const endpoint = `${baseUrl}/posts/${params.id}?_embed`
 
-    const { data, error, loading } = useAxios({
+    const { data: newsPost, error, loading } = useAxios({
         url: endpoint
     })
 
     // ----Check if photos have been returned----
     if (loading) return "Loading...";
-    if (!data) return "No data...";
-    if (data.length === 0) return "No results found!";
+    if (!newsPost) return "No data...";
+    if (newsPost.length === 0) return "No results found!";
     if (error) return "Error!";
-    console.log(data)
+    console.log(newsPost)
 
     // ----This function shows the news on the screen------
     const CheckImage = () => {
-        if (data._embedded['wp:featuredmedia']) {
+        if (newsPost._embedded['wp:featuredmedia']) {
             return (
-                <img src={data._embedded['wp:featuredmedia']['0'].source_url} alt={data.title.rendered} />
+                <img src={newsPost._embedded['wp:featuredmedia']['0'].source_url} alt={newsPost.title.rendered} />
             )
         } else {
             return (
@@ -47,8 +47,8 @@ const RenderedNewsPost = () => {
     return (
         <div className="post-container item-container">
             <CheckImage />
-            <h4 className="title">{data.title.rendered}</h4>
-            <div className="mb-2" dangerouslySetInnerHTML={{ __html: data.content.rendered }} />
+            <h4 className="title">{newsPost.title.rendered}</h4>
+            <div className="mb-2" dangerouslySetInnerHTML={{ __html: newsPost.content.rendered }} />
             <Link className="regular-button" to='/news'>Go Back</Link>
         </div>
     )

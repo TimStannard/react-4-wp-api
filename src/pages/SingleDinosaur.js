@@ -15,26 +15,26 @@ const GetDino = () => {
     // declare endpoint
     const endpoint = `${baseUrl}/dinosaurs/${params.id}?_embed`
 
-    const { data, error, loading } = useAxios({
+    const { data: dino, error, loading } = useAxios({
         url: endpoint
     })
 
     // ----Check if photos have been returned----
     if (loading) return "Loading...";
-    if (!data) return "No data...";
-    if (data.length === 0) return "No results found!";
+    if (!dino) return "No data...";
+    if (dino.length === 0) return "No results found!";
     if (error) return "Error!";
-    // console.log(data)
+    // console.log(dino)
 
     // ----This function shows the dino on the screen------
     return (
         <div className="single-dino-container">
-            <h2>{data.title.rendered}</h2>
-            <img src={data._embedded['wp:featuredmedia']['0'].source_url} alt={data.title.rendered} />
-            <h3>Nickname: {data.acf.nickname}</h3>
-            <h3>Diet: {data.acf.diet}</h3>
+            <h2>{dino.title.rendered}</h2>
+            <img src={dino._embedded['wp:featuredmedia']['0'].source_url} alt={dino.title.rendered} />
+            <h3>Nickname: {dino.acf.nickname}</h3>
+            <h3>Diet: {dino.acf.diet}</h3>
             <br />
-            <div id="content" dangerouslySetInnerHTML={{ __html: data.content.rendered }} />
+            <div id="content" dangerouslySetInnerHTML={{ __html: dino.content.rendered }} />
             <Link className="regular-button" to='/dinosaurs'>Go Back</Link>
         </div>
     )

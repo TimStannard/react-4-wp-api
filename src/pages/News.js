@@ -15,19 +15,19 @@ const baseUrl = process.env.REACT_APP_WP_API_BASEURL;
 const AllNews = () => {
     // declare endpoint
     const endpoint = `${baseUrl}/posts?_embed`
-    const { data, error, loading } = useAxios({
+    const { data: newsPosts, error, loading } = useAxios({
         url: endpoint
     })
 
     // ----Check if photos have been returned----
     if (loading) return "Loading...";
-    if (!data) return "No data...";
-    if (data.length === 0) return "No results found!";
+    if (!newsPosts) return "No data...";
+    if (newsPosts.length === 0) return "No results found!";
     if (error) return "Error!";
-    console.log(data)
+    console.log(newsPosts)
 
     // ----This function shows the news on the screen------
-    const renderedNews = data.map((post, index) => {
+    const renderedNews = newsPosts.map((post, index) => {
         const CheckImage = () => {
             if (post._embedded['wp:featuredmedia']) {
                 return (
