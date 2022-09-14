@@ -4,33 +4,32 @@ import axios from 'axios';
 const formEndpoint = process.env.REACT_APP_WP_API_FORM_ENDPOINT;
 
 const ContactForm = () => {
-
-    // let testSubmission = new FormData();
-    // testSubmission.append('your-name', 'Tim')
-    // testSubmission.append('your-email', 'Tim@Tim.com')
-    // testSubmission.append('your-message', 'Test')
-
-    // setup state for contact form
+    // ---------state-----------
+    // setup state for contact form submission
     const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState(false);
-    // handle a submit
+    // state for input values
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    // handle a submit function
     const handleSubmit = event => {
+        // stop page refreshing
         event.preventDefault()
 
-        // Format your body response
-        // const emailBody = {
-        //     "your-name": "test",
-        //     "your-email": "stannard.tim@gmail.com",
-        //     "your-message": "test",
-        // };
+        // 👇️ log input values here
+        // console.log('name: ', name)
+        // console.log('email: ', email)
+        // console.log('message: ', message)
 
         // ----Create a FormData object, and append each field to the object
         // form data is necessary to meet criteria of post request in contact form 7
         // it's a default javascript function, not unique to react
         const testForm = new FormData();
-        testForm.append('your-name', 'Tim')
-        testForm.append('your-email', 'Tim@Tim.com')
-        testForm.append('your-message', 'Test')
+        testForm.append('your-name', name)
+        testForm.append('your-email', email)
+        testForm.append('your-message', message)
 
         // ----post the form, using axios.post
         // first argument is the formEndpoint, second is the data
@@ -54,6 +53,7 @@ const ContactForm = () => {
             });
     };
     if (submitted) {
+        // return success message
         return (
             <>
                 <h3>Thank you!</h3>
@@ -73,14 +73,20 @@ const ContactForm = () => {
         <form
             onSubmit={handleSubmit}
             method="POST"
-        // target="_blank"
         >
             <div>
                 <label htmlFor="name">Name</label>
                 <input
                     type="text"
                     name="name"
-                // required
+                    // run a function onChange
+                    // this triggers when the input is changed
+                    // the function takes the event prop 
+                    // it changes name variable using setName state
+                    // uses event.target.value to grab the input value
+                    onChange={(event) => setName(event.target.value)}
+                    value={name}
+                    required
                 />
             </div>
             <div>
@@ -88,14 +94,18 @@ const ContactForm = () => {
                 <input
                     type="email"
                     name="email"
-                // required
+                    onChange={event => setEmail(event.target.value)}
+                    value={email}
+                    required
                 />
             </div>
             <div>
                 <label htmlFor="message">Message</label>
                 <textarea
                     name="message"
-                // required
+                    onChange={event => setMessage(event.target.value)}
+                    value={message}
+                    required
                 />
             </div>
             <div>
