@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React from 'react'
 // router
 import { Link } from "react-router-dom";
 
@@ -19,6 +19,9 @@ const MobileMenu = (props) => {
                 </li>
                 <li>
                     <Link to="/artists">Artists</Link>
+                </li>
+                <li>
+                    <Link to="/shop">Shop</Link>
                 </li>
                 <li>
                     <Link to="/contact" onClick={closeModal}>Contact</Link>

@@ -35,7 +35,7 @@ const AllNews = () => {
                 )
             } else {
                 return (
-                    <img src={PlaceholderImage} alt="placeholder image" />
+                    <img src={PlaceholderImage} alt="placeholder" />
                 )
             }
         }

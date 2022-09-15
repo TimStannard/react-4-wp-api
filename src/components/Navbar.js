@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import { List, X } from 'react-bootstrap-icons';
 import MobileMenu from './MobileMenu'
 // router
@@ -39,6 +39,9 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link to="/artists">Artists</Link>
+                    </li>
+                    <li>
+                        <Link to="/shop">Shop</Link>
                     </li>
                     <li>
                         <Link to="/contact">Contact</Link>

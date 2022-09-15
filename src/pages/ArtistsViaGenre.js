@@ -14,7 +14,7 @@ const GenreName = () => {
     const params = useParams();
     // get genre name based from API endpoint
     const genreEndpoint = `${baseUrl}/genre/${params.id}`
-    const { data: genre, error, loading } = useAxios({
+    const { data: genre, error } = useAxios({
         url: genreEndpoint
     })
 

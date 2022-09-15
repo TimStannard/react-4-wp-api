@@ -1,5 +1,5 @@
 // import dependancies
-import React, { Component } from 'react'
+import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // import components
@@ -16,6 +16,7 @@ import NewsItem from "../pages/NewsItem"
 import Artists from "../pages/Artists"
 import ArtistItem from "../pages/ArtistItem"
 import ArtistsViaGenre from "../pages/ArtistsViaGenre"
+import Shop from "../pages/Shop"
 import Contact from "../pages/Contact"
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
         <Route path='/artists' element={<Artists />} />
         <Route path='/artist/:id' element={<ArtistItem />} />
         <Route path='/genre/:id' element={<ArtistsViaGenre />} />
+        <Route path='/shop' element={<Shop />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer />
