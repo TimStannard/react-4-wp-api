@@ -148,6 +148,7 @@ h2 {
 button {
     background: none;
     border: none;
+    display: block;
 }
 
 button:hover {
@@ -208,9 +209,16 @@ button:hover {
     color: white;
     background-color: $darkblue;
     padding: 10px 17px;
-    display: inline-block;
     border-radius: $light-border;
     text-decoration: none;
+    margin-bottom: 10px;
+}
+
+#add-to-cart-button {
+    color: $darkblue;
+    background: $lightblue;
+    border: 2px solid $darkblue;
+    font-weight: 600;
 }
 
 .dinosaurs-link {
@@ -293,6 +301,12 @@ a svg {
 
 #artists-grid {
     margin-bottom: 20px;
+}
+
+// pages`
+
+#product-description {
+    margin-bottom: 30px;
 }
 
 

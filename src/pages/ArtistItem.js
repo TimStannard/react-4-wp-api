@@ -50,11 +50,11 @@ const RenderedArtist = () => {
     const Genres = () => {
         // get the term
         // console.log(data._links["wp:term"][0].href)
-        const TaxonomyEndpoint = artist._links["wp:term"][0].href;
-        let { data: taxonomies, error, loading } = useAxios({
-            url: TaxonomyEndpoint
+        const taxonomyEndpoint = artist._links["wp:term"][0].href;
+        let { data: taxonomies, error } = useAxios({
+            url: taxonomyEndpoint
         })
-        if (loading) return "Loading...";
+        // if (loading) return "Loading...";
         if (!taxonomies) return null;
         if (taxonomies.length === 0) return null;
         if (error) return "Error getting taxonomy!";

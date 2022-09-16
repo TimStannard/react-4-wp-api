@@ -28,7 +28,7 @@ const AllNews = () => {
 
     // ----This function shows the news on the screen------
     const renderedNews = newsPosts.map((post, index) => {
-        const CheckImage = () => {
+        const GetImageOrPlaceholder = () => {
             if (post._embedded['wp:featuredmedia']) {
                 return (
                     <img src={post._embedded['wp:featuredmedia']['0'].source_url} alt={post.title.rendered} />
@@ -41,7 +41,7 @@ const AllNews = () => {
         }
         return (
             <div className="post-container item-container" key={index}>
-                <CheckImage />
+                <GetImageOrPlaceholder />
                 <h4 className="title">{post.title.rendered}</h4>
                 <div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
                 <Link className="post-link" to={`/news/${post.id}`}>

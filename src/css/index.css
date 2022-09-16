@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,500;1,800&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +13,6 @@ body {
   margin: 0;
   padding: 0px;
 }
-
 body.no-scroll {
   overflow-y: hidden;
 }
@@ -67,7 +65,6 @@ h2 {
   background-color: #8797e5;
   color: rgb(46, 53, 81);
 }
-
 #hero p {
   font-size: 26px;
 }
@@ -77,7 +74,6 @@ h2 {
   background-color: rgb(46, 53, 81);
   color: #8797e5;
 }
-
 #footer p {
   font-size: 18px;
 }
@@ -90,7 +86,7 @@ h2 {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 /* nav */
@@ -135,6 +131,7 @@ h2 {
 button {
   background: none;
   border: none;
+  display: block;
 }
 
 button:hover {
@@ -158,7 +155,6 @@ button:hover {
   left: 0;
   padding-top: 25%;
 }
-
 #mobile-menu a {
   color: rgb(46, 53, 81);
   text-decoration: none;
@@ -194,9 +190,16 @@ button:hover {
   color: white;
   background-color: rgb(46, 53, 81);
   padding: 10px 17px;
-  display: inline-block;
   border-radius: 10px;
   text-decoration: none;
+  margin-bottom: 10px;
+}
+
+#add-to-cart-button {
+  color: rgb(46, 53, 81);
+  background: #8797e5;
+  border: 2px solid rgb(46, 53, 81);
+  font-weight: 600;
 }
 
 .dinosaurs-link {
@@ -220,15 +223,14 @@ button:hover {
   margin: 10px 0;
   font-size: 22px;
 }
-
 .item-container img {
   width: 100%;
   max-width: 500px;
   height: 250px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   -o-object-position: top;
-  object-position: top;
+     object-position: top;
 }
 
 .single-artist-container h4 {
@@ -244,7 +246,6 @@ button:hover {
   padding: 5px 10px;
   margin-bottom: 20px;
 }
-
 .taxonomy-term-pill:hover {
   background: #645a00;
   color: #ffeb3b;
@@ -270,43 +271,39 @@ a svg {
   margin-bottom: 20px;
 }
 
+#product-description {
+  margin-bottom: 30px;
+}
+
 /* Media queries */
 @media screen and (min-width: 680px) {
   h1 {
     font-size: 60px;
   }
-
   .results {
     grid-template-columns: repeat(3, 1fr);
   }
-
   .show-mobile-menu-button {
     display: none;
   }
-
   #menu {
     display: block;
     width: 75%;
   }
-
   #menu li {
     display: inline-block;
   }
-
   #menu-container {
     display: none;
   }
-
   .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-
   .single-dino-container #content {
     margin-bottom: 20px;
   }
-
   .single-dino-container img {
     width: 100%;
     max-width: 300px;

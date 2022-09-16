@@ -7,7 +7,7 @@ import Navbar from './Navbar'
 import Hero from './Hero'
 import Footer from './Footer'
 
-// import pages
+// ---import pages---
 import Home from "../pages/Home"
 import Dinosaurs from "../pages/Dinosaurs"
 import SingleDinosaur from "../pages/SingleDinosaur"
@@ -16,8 +16,10 @@ import NewsItem from "../pages/NewsItem"
 import Artists from "../pages/Artists"
 import ArtistItem from "../pages/ArtistItem"
 import ArtistsViaGenre from "../pages/ArtistsViaGenre"
-import Shop from "../pages/Shop"
 import Contact from "../pages/Contact"
+// shop
+import Shopfront from "../pages/shop/Shopfront"
+import Product from "../pages/shop/Product"
 
 const App = () => {
   // render() controls the contents of the container node you pass in. 
@@ -34,7 +36,8 @@ const App = () => {
         <Route path='/artists' element={<Artists />} />
         <Route path='/artist/:id' element={<ArtistItem />} />
         <Route path='/genre/:id' element={<ArtistsViaGenre />} />
-        <Route path='/shop' element={<Shop />} />
+        <Route path='/shop' element={<Shopfront />} />
+        <Route path='/product/:id' element={<Product />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer />
