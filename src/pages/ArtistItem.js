@@ -17,7 +17,7 @@ const RenderedArtist = () => {
     // ----declare our react router functions
     // 👇️ get ID from url
     const params = useParams();
-    // go back function
+    // go back function needs navigate
     const navigate = useNavigate();
 
     // ----declare endpoint

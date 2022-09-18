@@ -4,7 +4,6 @@ const baseUrl = process.env.REACT_APP_WOO_BASEURL
 // our exported add to cart function
 
 const AddToCart = (productId, responseReceived, notificationMessage) => {
-
     // console.log("clicked add to cart")
     // console.log(added);
     // Test the co-cart is plugged in and working
@@ -28,7 +27,9 @@ const AddToCart = (productId, responseReceived, notificationMessage) => {
                 notificationMessage("Successfully added to cart!")
                 // set the cart key
                 const uniqueCartKey = response.data.cart_key;
+                const itemCount = response.data.item_count;
                 localStorage.setItem('cartKey', uniqueCartKey)
+                localStorage.setItem('itemCount', itemCount)
             })
             .catch((error) => {
                 console.log(error);

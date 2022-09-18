@@ -110,6 +110,10 @@ h2 {
   padding-right: 30px;
 }
 
+#menu-button {
+  float: right;
+}
+
 #topnav {
   text-align: right;
 }
@@ -282,6 +286,17 @@ a svg {
   padding: 10px;
 }
 
+#cart-count {
+  position: absolute;
+  top: 17px;
+  right: 40px;
+  background: red;
+  padding: 0px 5px;
+  border-radius: 30px;
+  color: white;
+  font-size: 14px;
+}
+
 #cart-container .product-container {
   display: flex;
   border: 1px solid lightgrey;
@@ -311,7 +326,7 @@ a svg {
 }
 
 /* Media queries */
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 780px) {
   h1 {
     font-size: 60px;
   }

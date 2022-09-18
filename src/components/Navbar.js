@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { List, X, CartFill } from 'react-bootstrap-icons';
 import MobileMenu from './MobileMenu'
 // router
@@ -16,7 +16,6 @@ const Navbar = () => {
         // toggle no scroll on body
         document.body.classList.toggle('no-scroll');
     };
-
     return (
         <>
             <div id='topnav'>
@@ -47,7 +46,9 @@ const Navbar = () => {
                         <Link to="/contact">Contact</Link>
                     </li>
                     <li>
-                        <Link to={`/cart`}><CartFill /></Link>
+                        <Link to={`/cart`}>
+                            <CartFill /> Cart
+                        </Link>
                     </li>
                 </ul>
 

@@ -21,6 +21,7 @@ import Contact from "../pages/Contact"
 import Shopfront from "../pages/shop/Shopfront"
 import Product from "../pages/shop/Product"
 import Cart from "../pages/shop/Cart"
+import Checkout from "../pages/shop/Checkout"
 
 const App = () => {
   // render() controls the contents of the container node you pass in. 
@@ -45,6 +46,7 @@ const App = () => {
         <Route path='/shop' element={<Shopfront />} />
         <Route path='/product/:id' element={<Product />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='/checkout' element={<Checkout />} />
       </Routes>
       <Footer />
     </BrowserRouter>

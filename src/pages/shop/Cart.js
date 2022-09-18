@@ -1,6 +1,7 @@
 import React from 'react'
 import { useAxios } from "use-axios-client";
 import PlaceholderImage from "../../assets/placeholder-no-image.png"
+import { Link } from "react-router-dom";
 
 const baseUrl = process.env.REACT_APP_WOO_BASEURL
 
@@ -62,7 +63,9 @@ const GetCart = ({ cartKey }) => {
                 {renderedProducts}
             </div>
             <Total />
-            <button className="regular-button">Checkout</button>
+            <Link to={`/checkout`} >
+                <button className="regular-button">Checkout</button>
+            </Link>
         </>
     )
 }
