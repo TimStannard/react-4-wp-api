@@ -57,6 +57,7 @@ const Navbar = () => {
             </div>
 
             {/* If menuIsOpen, show the mobile menu*/}
+            {/* give the mobile menu our close method (toggleMobileMenu) too, as a prop, so you can close it by clicking on a link */}
             {menuIsOpen && <MobileMenu closeMethod={toggleMobileMenu} />}
             {/* If menuIsOpen, show the close button */}
             {menuIsOpen &&

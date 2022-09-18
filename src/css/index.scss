@@ -4,6 +4,7 @@ $lightblue: #8797e5;
 $darkblue: rgb(46, 53, 81);
 $lightyellow: #ffeb3b;
 $darkyellow: #645a00;
+$lightgreen: #cddc39;
 $light-border: 10px;
 $very-light-border: 5px;
 
@@ -255,7 +256,7 @@ button:hover {
         max-width: 500px;
         height: 250px;
         object-fit: cover;
-        object-position: top;
+        object-position: center;
     }
 }
 
@@ -307,6 +308,14 @@ a svg {
 
 #product-description {
     margin-bottom: 30px;
+}
+
+// notification
+#notification p {
+    background-color: $lightgreen;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 

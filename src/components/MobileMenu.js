@@ -18,10 +18,10 @@ const MobileMenu = (props) => {
                     <Link to="/news" onClick={closeModal}>News</Link>
                 </li>
                 <li>
-                    <Link to="/artists">Artists</Link>
+                    <Link to="/artists" onClick={closeModal}>Artists</Link>
                 </li>
                 <li>
-                    <Link to="/shop">Shop</Link>
+                    <Link to="/shop" onClick={closeModal}>Shop</Link>
                 </li>
                 <li>
                     <Link to="/contact" onClick={closeModal}>Contact</Link>

@@ -229,8 +229,8 @@ button:hover {
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .single-artist-container h4 {
@@ -273,6 +273,13 @@ a svg {
 
 #product-description {
   margin-bottom: 30px;
+}
+
+#notification p {
+  background-color: #cddc39;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 /* Media queries */
