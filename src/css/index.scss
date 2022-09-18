@@ -5,6 +5,7 @@ $darkblue: rgb(46, 53, 81);
 $lightyellow: #ffeb3b;
 $darkyellow: #645a00;
 $lightgreen: #cddc39;
+$lightgrey: lightgrey;
 $light-border: 10px;
 $very-light-border: 5px;
 
@@ -311,13 +312,49 @@ a svg {
 }
 
 // notification
-#notification p {
+#notification {
     background-color: $lightgreen;
     margin-bottom: 10px;
     border-radius: 5px;
     padding: 10px;
 }
 
+// cart
+
+#cart-container {
+    .product-container {
+        display: flex;
+        border: 1px solid $lightgrey;
+        border-radius: $very-light-border;
+        margin-bottom: 2px;
+        padding: 10px;
+
+        p {
+            padding: 15px;
+        }
+
+        &:hover {
+            transform: scale(1.04)
+        }
+    }
+
+    img {
+        width: 75px;
+        height: 75px;
+        border-radius: $very-light-border;
+        margin-right: 10px;
+        border: 1px solid $lightgrey;
+    }
+
+    #total-container {
+        margin-bottom: 10px
+    }
+
+}
+
+#rendered-products {
+    margin-bottom: 20px
+}
 
 /* Media queries */
 @media screen and (min-width: 680px) {

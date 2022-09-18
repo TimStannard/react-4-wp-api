@@ -25,7 +25,7 @@ const AllProducts = () => {
 
 
 
-    // ----This function shows the cats on the screen------
+    // ----This function shows the products on the screen------
     const renderedProducts = products.map((product, index) => {
         const GetImageOrPlaceholder = () => {
             if (product.images.length > 0) {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { List, X } from 'react-bootstrap-icons';
+import { List, X, CartFill } from 'react-bootstrap-icons';
 import MobileMenu from './MobileMenu'
 // router
 import { Link } from "react-router-dom";
@@ -45,6 +45,9 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link to="/contact">Contact</Link>
+                    </li>
+                    <li>
+                        <Link to={`/cart`}><CartFill /></Link>
                     </li>
                 </ul>
 

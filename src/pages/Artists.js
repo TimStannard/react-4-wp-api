@@ -9,7 +9,6 @@ const baseUrl = process.env.REACT_APP_WP_API_BASEURL;
 
 
 const AllArtists = () => {
-    // console.log(props);
 
     // declare endpoint
     const endpoint = `${baseUrl}/artists?_embed`

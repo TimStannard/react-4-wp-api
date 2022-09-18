@@ -275,11 +275,39 @@ a svg {
   margin-bottom: 30px;
 }
 
-#notification p {
+#notification {
   background-color: #cddc39;
   margin-bottom: 10px;
   border-radius: 5px;
   padding: 10px;
+}
+
+#cart-container .product-container {
+  display: flex;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin-bottom: 2px;
+  padding: 10px;
+}
+#cart-container .product-container p {
+  padding: 15px;
+}
+#cart-container .product-container:hover {
+  transform: scale(1.04);
+}
+#cart-container img {
+  width: 75px;
+  height: 75px;
+  border-radius: 5px;
+  margin-right: 10px;
+  border: 1px solid lightgrey;
+}
+#cart-container #total-container {
+  margin-bottom: 10px;
+}
+
+#rendered-products {
+  margin-bottom: 20px;
 }
 
 /* Media queries */

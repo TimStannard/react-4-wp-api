@@ -1,53 +1,20 @@
 import React, { useState } from 'react'
-import { useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft } from 'react-bootstrap-icons';
+import { useParams, useNavigate } from "react-router-dom"
+import { ArrowLeft } from 'react-bootstrap-icons'
 import PlaceholderImage from "../../assets/placeholder-no-image.png"
-import { useAxios } from "use-axios-client";
-import axios from 'axios';
-
+import { useAxios } from "use-axios-client"
+// our utilities
+import addToCart from "./utilities/addToCart.js"
+import Notification from "./utilities/Notification.js"
+// get base URL
 const baseUrl = process.env.REACT_APP_WOO_BASEURL
 
-const addToCart = (productId, responseReceived, notificationMessage) => {
-    // console.log("clicked add to cart")
-    // console.log(added);
-    // Test the co-cart is plugged in and working
-    // Run a GET  to the following endpoint:
-    // ​http://localhost:8888/wordpress-api/wp-json/cocart/v2/store
-
-    const cartEndpoint = `${baseUrl}/wp-json/cocart/v2/cart/add-item`
-    const idString = productId.toString();
-    axios.post(cartEndpoint, {
-        id: idString,
-        quantity: "1"
-    })
-        .then((response) => {
-            console.log(response);
-            responseReceived(true)
-            notificationMessage("Successfully added to cart!")
-        })
-        .catch((error) => {
-            console.log(error);
-            responseReceived(true)
-            notificationMessage("Sorry there was a problem. Please try again later.")
-        });
-
-}
-
-const Notification = ({ type }) => {
-    // console.log(type);
-    return (
-        <div id="notification">
-            <p>{type}</p>
-        </div>
-    )
-}
-
-
 const SingleProduct = () => {
-
+    // set up variables which check if product was added to cart
     const [responseRecieved, updateResponse] = useState(false);
     const [notification, updateNotification] = useState("");
 
+    // router set up
     const params = useParams();
     const navigate = useNavigate();
 
@@ -62,7 +29,7 @@ const SingleProduct = () => {
     if (!product) return "No data...";
     if (product.length === 0) return "No results found!";
     if (error) return "Error!";
-    console.log(product)
+    // console.log(product)
 
     const GetImageOrPlaceholder = () => {
         if (product.images.length > 0) {
