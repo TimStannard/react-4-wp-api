@@ -1,8 +1,7 @@
 import { useAxios } from "use-axios-client";
-import React from 'react'
 import { Link } from "react-router-dom";
 import PlaceholderImage from "../assets/placeholder-no-image.png"
-// Placeholder retrieved from...
+// Note: Placeholder retrieved from...
 // https://classnotes.marquette.edu/wp-content/uploads/2019/11/placeholder-no-image.png
 
 // get our env variable, the baseURL

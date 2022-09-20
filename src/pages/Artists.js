@@ -1,12 +1,10 @@
 import { useAxios } from "use-axios-client";
-import React from 'react'
 import { Link } from "react-router-dom";
 const baseUrl = process.env.REACT_APP_WP_API_BASEURL;
 
 // ------------This function:------------
 // - gets images from api
 // - renders images based on the API data
-
 
 const AllArtists = () => {
 

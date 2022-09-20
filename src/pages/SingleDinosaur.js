@@ -1,11 +1,11 @@
 import { useAxios } from "use-axios-client";
-import React from 'react'
 import { Link, useParams } from "react-router-dom";
+
 const baseUrl = process.env.REACT_APP_WP_API_BASEURL;
 
 // ------------This function:------------
-// - gets images from api
-// - renders images based on the API data
+// - gets dino from api
+// - renders dino based on the API data
 
 const GetDino = () => {
     // 👇️ get ID from url
@@ -19,7 +19,7 @@ const GetDino = () => {
         url: endpoint
     })
 
-    // ----Check if photos have been returned----
+    // ----Check if dino has been returned----
     if (loading) return "Loading...";
     if (!dino) return "No data...";
     if (dino.length === 0) return "No results found!";

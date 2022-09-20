@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import { useState } from 'react'
 import axios from 'axios';
 
 const formEndpoint = process.env.REACT_APP_WP_API_FORM_ENDPOINT;
@@ -14,7 +14,7 @@ const ContactForm = () => {
     const [message, setMessage] = useState('');
 
     // handle a submit function
-    const handleSubmit = event => {
+    const handleSubmit = (event) => {
         // stop page refreshing
         event.preventDefault()
 
@@ -125,7 +125,6 @@ const Contact = () => {
         <div id="contact-container" className="page-container">
             <div className="section">
                 <h2>Contact us</h2>
-
                 <ContactForm />
             </div>
         </div>

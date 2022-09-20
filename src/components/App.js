@@ -1,8 +1,7 @@
-// import dependancies
-import React from 'react'
+// import dependencies
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// import components
+// ---import components---
 import Navbar from './Navbar'
 import Hero from './Hero'
 import Footer from './Footer'
@@ -53,8 +52,4 @@ const App = () => {
   )
 }
 
-
 export default App
-
-// Note: other components we can use
-

@@ -1,10 +1,8 @@
 import { useAxios } from "use-axios-client";
-import React from 'react'
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft } from 'react-bootstrap-icons';
 
 const baseUrl = process.env.REACT_APP_WP_API_BASEURL;
-
 
 // ------------This function:------------
 // - gets images from api
