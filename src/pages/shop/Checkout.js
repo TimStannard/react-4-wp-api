@@ -1,7 +1,4 @@
-import React, { useState } from 'react'
 import { ArrowLeft } from 'react-bootstrap-icons'
-import PlaceholderImage from "../../assets/placeholder-no-image.png"
-import { useAxios } from "use-axios-client"
 import { useNavigate } from "react-router-dom";
 
 // get base URL

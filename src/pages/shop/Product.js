@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useParams, useNavigate } from "react-router-dom"
 import { ArrowLeft } from 'react-bootstrap-icons'
 import PlaceholderImage from "../../assets/placeholder-no-image.png"
@@ -24,7 +24,7 @@ const SingleProduct = () => {
         url: endpoint
     })
 
-    // ----Check if photos have been returned----
+    // ----Check if products have been returned----
     if (loading) return "Loading...";
     if (!product) return "No data...";
     if (product.length === 0) return "No results found!";

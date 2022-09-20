@@ -1,4 +1,3 @@
-import React from 'react'
 import { useAxios } from "use-axios-client";
 import PlaceholderImage from "../../assets/placeholder-no-image.png"
 import { Link } from "react-router-dom";
@@ -13,7 +12,7 @@ const GetCart = ({ cartKey }) => {
         url: cartEndpoint
     })
 
-    // ----Check if photos have been returned----
+    // ----Check if cart has been returned----
     if (loading) return "Loading...";
     if (!cart) return "No data...";
     // if (products.length === 0) return "No results found!";
@@ -37,7 +36,6 @@ const GetCart = ({ cartKey }) => {
         }
         return (
             <div className="product-container item-container" key={index}>
-                {/* <Link className="product-link" to={`/product/${product.id}`} > */}
                 <GetImageOrPlaceholder />
                 <div id="cart-item-details">
                     <p className="name"><b>{product.name}</b></p>

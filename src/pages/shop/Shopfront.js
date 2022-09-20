@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import PlaceholderImage from "../../assets/placeholder-no-image.png"
 import { useAxios } from "use-axios-client";
@@ -16,7 +15,7 @@ const AllProducts = () => {
         url: endpoint
     })
 
-    // ----Check if photos have been returned----
+    // ----Check if products have been returned----
     if (loading) return "Loading...";
     if (!products) return "No data...";
     if (products.length === 0) return "No results found!";
