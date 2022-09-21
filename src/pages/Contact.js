@@ -1,6 +1,5 @@
-import { React, useState } from 'react'
+import { useState } from 'react'
 import axios from 'axios';
-
 const formEndpoint = process.env.REACT_APP_WP_API_FORM_ENDPOINT;
 
 const ContactForm = () => {

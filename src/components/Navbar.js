@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { List, X, CartFill } from 'react-bootstrap-icons';
 import MobileMenu from './MobileMenu'
 // router

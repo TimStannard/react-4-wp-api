@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom";
 import PlaceholderImage from "../../assets/placeholder-no-image.png"
 import { useAxios } from "use-axios-client";
 
-const key = process.env.REACT_APP_WOO_KEY
-const secret = process.env.REACT_APP_WOO_SECRET
 const baseUrl = process.env.REACT_APP_WOO_BASEURL
 
 const AllProducts = () => {

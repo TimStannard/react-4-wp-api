@@ -1,5 +1,4 @@
 import { useAxios } from "use-axios-client";
-import React from 'react'
 import { Link, useParams } from "react-router-dom";
 import PlaceholderImage from "../assets/placeholder-no-image.png"
 // Placeholder retrieved from...

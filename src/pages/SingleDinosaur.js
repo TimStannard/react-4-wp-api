@@ -1,5 +1,4 @@
 import { useAxios } from "use-axios-client";
-import React from 'react'
 import { Link, useParams } from "react-router-dom";
 const baseUrl = process.env.REACT_APP_WP_API_BASEURL;
 

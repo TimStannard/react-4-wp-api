@@ -1,5 +1,4 @@
 import { useAxios } from "use-axios-client";
-import React from 'react'
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft } from 'react-bootstrap-icons';
 
