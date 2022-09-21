@@ -11,8 +11,9 @@ const baseUrl = process.env.REACT_APP_WOO_BASEURL
 
 const SingleProduct = () => {
     // set up variables which check if product was added to cart
-    const [responseRecieved, updateResponse] = useState(false);
-    const [notification, updateNotification] = useState("");
+    const [responseRecieved, updateResponse] = useState(false)
+    const [notification, updateNotification] = useState("")
+    const [buttonStatus, updateButtonStatus] = useState("Add to cart")
 
     // router set up
     const params = useParams();
@@ -51,7 +52,7 @@ const SingleProduct = () => {
             </div>
             <div id="product-description" dangerouslySetInnerHTML={{ __html: product.description }} />
             <div id="tools">
-                <button id="add-to-cart-button" className="regular-button" onClick={() => { addToCart(product.id, updateResponse, updateNotification) }}>Add to cart</button>
+                <button id="add-to-cart-button" className="regular-button" onClick={() => { addToCart(product.id, updateResponse, updateNotification, updateButtonStatus) }}>{buttonStatus}</button>
                 {/* custom message for the user when a product is added */}
                 {responseRecieved && <Notification type={notification} />}
                 {/* back button */}
@@ -70,7 +71,6 @@ const Product = () => {
             <div id="shop-page" className="page-container">
                 <SingleProduct />
             </div>
-
         </>
     )
 }

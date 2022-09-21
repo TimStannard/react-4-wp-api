@@ -3,7 +3,7 @@ const baseUrl = process.env.REACT_APP_WOO_BASEURL
 
 // our exported add to cart function
 
-const AddToCart = (productId, responseReceived, notificationMessage) => {
+const AddToCart = (productId, responseReceived, notificationMessage, buttonStatus) => {
     // console.log("clicked add to cart")
     // console.log(added);
     // Test the co-cart is plugged in and working
@@ -13,7 +13,7 @@ const AddToCart = (productId, responseReceived, notificationMessage) => {
     // make the product ID a string so it can be interpreted by the coCart API
     // (id and quantity properties are strings) - see https://docs.cocart.xyz/?javascript--node#add-to-cart-clear-cart-parameters
     const idString = productId.toString();
-
+    buttonStatus("Adding to cart...")
     // Update cart with new item
     const updateCart = (endpoint) => {
         // console.log("end point" + endpoint);
@@ -24,6 +24,7 @@ const AddToCart = (productId, responseReceived, notificationMessage) => {
             .then((response) => {
                 // console.log(response)
                 responseReceived(true)
+                buttonStatus("Add to cart")
                 notificationMessage("Successfully added to cart!")
                 // set the cart key
                 const uniqueCartKey = response.data.cart_key;
