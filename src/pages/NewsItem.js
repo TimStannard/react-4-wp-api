@@ -8,8 +8,8 @@ import PlaceholderImage from "../assets/placeholder-no-image.png"
 const baseUrl = process.env.REACT_APP_WP_API_BASEURL;
 
 // ------------This function:------------
-// - gets new from api
-// - renders news based on the API data
+// - gets news item from api
+// - renders news item based on the API data
 
 const RenderedNewsPost = () => {
     // 👇️ get ID from url

@@ -1,10 +1,11 @@
 import { useAxios } from "use-axios-client";
 import { Link } from "react-router-dom";
+
 const baseUrl = process.env.REACT_APP_WP_API_BASEURL;
 
 // ------------This function:------------
-// - gets images from api
-// - renders images based on the API data
+// - gets dinos from api
+// - renders dinos based on the API data
 
 
 const AllDinosaurs = () => {
@@ -24,7 +25,7 @@ const AllDinosaurs = () => {
     if (error) return "Error!";
     // console.log(data)
 
-    // ----This function shows the cats on the screen------
+    // ----This function shows the dinos on the screen------
     const renderedDinos = dinosaurs.map((dino, index) => {
         return (
             <div className="dino-container item-container" key={index}>
@@ -38,8 +39,7 @@ const AllDinosaurs = () => {
 
         )
     })
-    // ----this is the return function for AllCats()----
-    // we return the rendered cats
+    // we return the rendered dinos
     return (
         <>
             {renderedDinos}

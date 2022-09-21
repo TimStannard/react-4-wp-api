@@ -6,7 +6,6 @@ const baseUrl = process.env.REACT_APP_WP_API_BASEURL;
 // - gets images from api
 // - renders images based on the API data
 
-
 const AllArtists = () => {
 
     // declare endpoint

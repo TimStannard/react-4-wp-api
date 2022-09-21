@@ -1,29 +1,31 @@
 // router
 import { Link } from "react-router-dom";
+import { X } from 'react-bootstrap-icons';
 
-const MobileMenu = (props) => {
-    // console.log(props);
-    const closeModal = props.closeMethod;
+const MobileMenu = ({ closeMethod }) => {
     return (
         <>
+            <button id="close-nav-menu" onClick={closeMethod}>
+                <X />
+            </button>
             <ul id='mobile-menu'>
                 <li>
-                    <Link to="/" onClick={closeModal}>Home</Link>
+                    <Link to="/" onClick={closeMethod}>Home</Link>
                 </li>
                 <li>
-                    <Link to="/dinosaurs" onClick={closeModal}>Dinosaurs</Link>
+                    <Link to="/dinosaurs" onClick={closeMethod}>Dinosaurs</Link>
                 </li>
                 <li>
-                    <Link to="/news" onClick={closeModal}>News</Link>
+                    <Link to="/news" onClick={closeMethod}>News</Link>
                 </li>
                 <li>
-                    <Link to="/artists" onClick={closeModal}>Artists</Link>
+                    <Link to="/artists" onClick={closeMethod}>Artists</Link>
                 </li>
                 <li>
-                    <Link to="/shop" onClick={closeModal}>Shop</Link>
+                    <Link to="/shop" onClick={closeMethod}>Shop</Link>
                 </li>
                 <li>
-                    <Link to="/contact" onClick={closeModal}>Contact</Link>
+                    <Link to="/contact" onClick={closeMethod}>Contact</Link>
                 </li>
             </ul>
         </>

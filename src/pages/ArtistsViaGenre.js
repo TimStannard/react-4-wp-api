@@ -4,7 +4,6 @@ import { ArrowLeft } from 'react-bootstrap-icons';
 
 const baseUrl = process.env.REACT_APP_WP_API_BASEURL;
 
-
 // ------------This function:------------
 // - gets images from api
 // - renders images based on the API data

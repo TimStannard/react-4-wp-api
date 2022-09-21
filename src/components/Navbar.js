@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { List, X, CartFill } from 'react-bootstrap-icons';
+import { List, CartFill } from 'react-bootstrap-icons';
 import MobileMenu from './MobileMenu'
 // router
 import { Link } from "react-router-dom";
@@ -64,13 +64,6 @@ const Navbar = () => {
             {/* give the mobile menu our close method (toggleMobileMenu) too, as a prop, so you can close it by clicking on a link */}
             {menuIsOpen && <MobileMenu closeMethod={toggleMobileMenu} />}
             {/* If menuIsOpen, show the close button */}
-            {menuIsOpen &&
-                (
-                    <button id="close-nav-menu" onClick={toggleMobileMenu}>
-                        <X />
-                    </button>
-                )
-            }
         </>
     )
 }
